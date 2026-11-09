@@ -1,0 +1,22 @@
+SABOR & ARTE BISTRO - SITE PRONTO (sem terminal)
+
+COMO ABRIR
+1. Extraia o ZIP (botão direito > Extrair tudo).
+2. No VS Code: Arquivo > Abrir Pasta e escolha a pasta extraída (onde está o index.html).
+3. Com a extensão "Live Server" (Ritwick Dey): botão direito em index.html > Open with Live Server.
+
+O QUE TROCAR ANTES DE ENTREGAR AO CLIENTE
+- js/config.js : WhatsApp das reservas (obrigatório), telefone, Instagram, endereço, horários.
+                 mapQuery = endereço REAL para o Google Maps (o atual é só exemplo).
+- js/data.js   : cardápio (pratos, descrições, preços e etiquetas são EXEMPLOS).
+                 Confirme com a cozinha as etiquetas Vegetariano / Vegano / Sem glúten.
+
+FOTOS DOS PRATOS
+Crie uma pasta "img" ao lado do index.html e, em js/data.js, adicione no prato: img: 'img/nome.jpg'
+
+RESERVAS
+O cliente escolhe pessoas, dia e horário. O botão abre o WhatsApp do restaurante com a mensagem pronta.
+Não há consulta a agenda real: a mesa só é garantida após a confirmação do restaurante.
+
+MAPA
+O mapa usa o Google Maps incorporado a partir do endereço (precisa de internet, sem chave de API).

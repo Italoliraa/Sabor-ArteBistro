@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor &amp; Arte Bistro | Cardápio, localização e reservas</title>
+  <meta name="description" content="Cozinha autoral servida como arte. Veja o cardápio digital, encontre o restaurante no mapa e reserve sua mesa na hora.">
+  <meta name="theme-color" content="#F2B134">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23F2B134'/%3E%3Ccircle cx='32' cy='34' r='16' fill='%23C8381F'/%3E%3Cpath d='M32 20c0-8 6-12 14-12 0 8-6 12-14 12z' fill='%232F6B4F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__in">
+      <a href="#inicio" class="logo" aria-label="Sabor e Arte Bistro, início">Sabor <em>&amp;</em> Arte<small>Bistro</small></a>
+      <nav id="nav" class="nav" aria-label="Principal">
+        <a href="#sobre">A casa</a><a href="#cardapio">Cardápio</a><a href="#local">Localização</a>
+        <button type="button" class="btn btn--red nav__cta" data-reserve><span data-icon="calendar" data-size="18"></span>Reservar mesa</button>
+      </nav>
+      <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"></button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="status" data-status><i></i><span>Verificando horário…</span></p>
+          <h1>Sabor <em>&amp;</em> Arte<span>Bistro</span></h1>
+          <p class="hero__lead">Cozinha autoral, servida como arte. Veja o cardápio, encontre a gente no mapa e garanta sua mesa em menos de um minuto.</p>
+          <div class="hero__actions">
+            <button type="button" class="btn btn--red" data-reserve><span data-icon="calendar" data-size="20"></span>Reservar agora</button>
+            <a href="#cardapio" class="btn btn--ink">Ver cardápio</a>
+          </div>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <svg viewBox="0 0 520 540" class="collage">
+            <circle cx="270" cy="276" r="214" fill="#FAFAF7"/>
+            <circle cx="270" cy="276" r="168" fill="none" stroke="#1F2430" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round"/>
+            <path d="M120 400C80 300 110 190 210 150c20 90 0 190-90 250Z" fill="#2F6B4F"/>
+            <path d="M170 380c20-70 50-130 90-190" stroke="#FAFAF7" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="320" cy="250" r="96" fill="#C8381F"/>
+            <path d="M320 156c-4-30 14-52 46-56-2 30-18 50-46 56Z" fill="#2F6B4F" class="leaf"/>
+            <path d="M286 220c14-14 30-20 48-18" stroke="#FAFAF7" stroke-width="7" fill="none" stroke-linecap="round" opacity=".55"/>
+            <path d="M330 470a110 110 0 0 1 130-120l-14 120Z" fill="#F2B134"/>
+            <rect x="60" y="70" width="120" height="120" rx="14" transform="rotate(-14 120 130)" fill="#1F2430"/>
+            <circle cx="120" cy="130" r="30" fill="#F2B134"/>
+            <path d="M400 70c30 20 40 50 20 80" stroke="#1F2430" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <circle cx="440" cy="60" r="12" fill="#C8381F"/><circle cx="64" cy="330" r="10" fill="#FAFAF7"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section about">
+      <div class="container about__in reveal">
+        <h2>Um prato pode ser uma obra.</h2>
+        <p id="about-text"></p>
+      </div>
+    </section>
+
+    <section id="cardapio" class="section section--paper">
+      <div class="container">
+        <div class="head"><h2>Cardápio</h2><p>Busque um prato ou filtre por restrição alimentar. Valores e pratos de exemplo.</p></div>
+        <div class="tools">
+          <label class="search"><span data-icon="search" data-size="20"></span><input id="search" type="search" placeholder="Buscar no cardápio" aria-label="Buscar no cardápio"></label>
+          <div id="tag-filters" class="pills" role="group" aria-label="Filtrar por restrição"></div>
+        </div>
+        <nav id="tabs" class="tabs" aria-label="Categorias do cardápio"></nav>
+        <div id="menu-list" class="menu"></div>
+        <p class="note">Tem alergia ou restrição alimentar? Avise nossa equipe antes de pedir.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container band__in reveal">
+        <div><h2>Sua mesa está esperando.</h2><p>Escolha dia, horário e número de pessoas. A reserva segue pronta para o WhatsApp do restaurante.</p></div>
+        <button type="button" class="btn btn--paper" data-reserve><span data-icon="calendar" data-size="20"></span>Reservar mesa agora</button>
+      </div>
+    </section>
+
+    <section id="local" class="section section--paper">
+      <div class="container local">
+        <div class="reveal">
+          <h2>Onde estamos</h2>
+          <p class="status status--dark" data-status><i></i><span></span></p>
+          <ul class="info">
+            <li><span data-icon="pin" data-size="22"></span><div><strong>Endereço</strong><span data-site="address"></span></div></li>
+            <li><span data-icon="phone" data-size="22"></span><div><strong>Telefone</strong><a data-tel href="#">Ligar para o restaurante</a><span data-site="phone"></span></div></li>
+            <li><span data-icon="whatsapp" data-size="22"></span><div><strong>WhatsApp</strong><a data-wa href="#">Enviar mensagem</a></div></li>
+            <li><span data-icon="instagram" data-size="22"></span><div><strong>Instagram</strong><a data-ig href="#">@instagram</a></div></li>
+          </ul>
+          <div class="hours"><h3><span data-icon="clock" data-size="22"></span>Horário de funcionamento</h3><ul id="hours-list"></ul></div>
+        </div>
+        <div class="reveal">
+          <div id="map" class="map"><div class="map__ph"><span data-icon="pin" data-size="28"></span><span>Informe o endereço em js/config.js para exibir o mapa</span></div></div>
+          <div class="map__actions"><a id="map-route" class="btn btn--green" target="_blank" rel="noreferrer"><span data-icon="route" data-size="18"></span>Como chegar</a><a id="map-open" class="btn btn--line" target="_blank" rel="noreferrer">Abrir no Google Maps</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer__in"><span class="logo">Sabor <em>&amp;</em> Arte<small>Bistro</small></span><span>© <span data-year></span> Sabor &amp; Arte Bistro. Todos os direitos reservados.</span></div></footer>
+
+  <div class="dock"><a href="#cardapio" class="dock__menu">Cardápio</a><button type="button" class="dock__book" data-reserve><span data-icon="calendar" data-size="20"></span>Reservar mesa</button></div>
+
+  <dialog id="reserve" class="dialog" aria-labelledby="r-title">
+    <form id="r-form" novalidate>
+      <div class="dialog__head"><h2 id="r-title">Reservar mesa</h2><button type="button" id="r-close" class="x" aria-label="Fechar"><span data-icon="x" data-size="22"></span></button></div>
+      <div class="f"><span class="lbl">Pessoas</span>
+        <div class="stepper"><button type="button" id="r-minus" aria-label="Menos uma pessoa"><span data-icon="minus" data-size="20"></span></button><output id="r-count" aria-live="polite">2</output><button type="button" id="r-plus" aria-label="Mais uma pessoa"><span data-icon="plus" data-size="20"></span></button></div>
+        <p id="r-big" class="hint" hidden>Para grupos maiores, fale direto com a gente: <a data-wa href="#">WhatsApp</a> ou <a data-tel href="#">ligue</a>.</p></div>
+      <fieldset class="f"><legend class="lbl">Dia</legend><div id="r-days" class="chips"></div></fieldset>
+      <fieldset class="f"><legend class="lbl">Horário</legend><div id="r-times" class="chips"></div></fieldset>
+      <label class="f"><span class="lbl">Nome da reserva</span><input id="r-name" type="text" autocomplete="name"></label>
+      <label class="f"><span class="lbl">Observações (opcional)</span><input id="r-obs" type="text" placeholder="Aniversário, alergias, cadeirinha…"></label>
+      <p id="r-sum" class="summary" aria-live="polite"></p><p id="r-err" class="err" role="alert"></p>
+      <button id="r-btn" class="btn btn--red btn--block" type="submit" disabled><span data-icon="whatsapp" data-size="20"></span>Enviar reserva pelo WhatsApp</button>
+      <p class="hint">A mesa fica garantida após a confirmação do restaurante. Prefere ligar? <a data-tel href="#">Ligar agora</a></p>
+    </form>
+  </dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
